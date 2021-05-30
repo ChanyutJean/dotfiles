@@ -70,7 +70,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=()
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,6 +102,7 @@ eval $(thefuck --alias)
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 alias please='sudo !!'
 alias v='vim'
 alias c='clear'
@@ -109,6 +110,35 @@ alias aliases='vim ~/.zshrc && . ~/.zshrc'
 alias grep='grep -E'
 alias sed='sed -E'
 alias gimme='sudo apt-get install'
+
+# Git aliases
+
+alias g='git'
+alias gcl='git clone'
+alias ga='git add'
+alias gaa='git add --all'
+alias gbd='git branch --delete'
+alias gc='git commit --verbose -m'
+alias gcb='git checkout -b'
+alias gcf='git config --list'
+alias gcl='git clone'
+alias gco='git checkout'
+alias gcp='git cherry-pick'
+alias gd='git diff'
+alias gf='git fetch'
+alias gl='git pull'
+alias gp='git push'
+alias gps='git push --set-upstream origin $(current_branch)'
+alias glog='git log --oneline --decorate --graph'
+alias gm='git merge'
+alias gr='git remote'
+alias gra='git remote add'
+alias gst='git status'
+alias gt='git tag'
+alias gsta='git stash push'
+alias gstl='git stash list'
+alias gstp='git stash pop'
+alias gstc='git stash clear'
 
 # Change directory to Desktop
 cd ~/Desktop
