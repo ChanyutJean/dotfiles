@@ -1,4 +1,6 @@
 #!/bin/sh
-cat .vimrc > ~/.vimrc
-cat .zshrc > ~/.zshrc
-source ~/.zshrc
+pwd=$(pwd)
+cd ~
+ln -s .vimrc "$pwd/.vimrc"
+ln -s .zshrc "$pwd/.zshrc"
+source .zshrc
