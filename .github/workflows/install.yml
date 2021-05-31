@@ -1,13 +1,10 @@
 # This is a basic workflow to help you get started with Actions
 
 name: Install-CI
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-  workflow_dispatch:
-  
+on: [push, pull_request, workflow_dispatch]
+defaults:
+  run:
+    shell: zsh
 jobs:
   build:
     runs-on: ubuntu-latest
