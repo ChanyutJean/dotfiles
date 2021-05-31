@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/jean/.oh-my-zsh"
+export ZSH="/home/$(whoami)/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -106,6 +106,9 @@ eval $(thefuck --alias)
 alias please='sudo !!'
 alias v='vim'
 alias c='clear'
+alias p='python3'
+alias img='xdg-open'
+alias vdo='mplayer'
 alias aliases='vim ~/.zshrc && . ~/.zshrc'
 alias grep='grep -E'
 alias sed='sed -E'
