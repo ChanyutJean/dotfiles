@@ -2,12 +2,12 @@
 
 name: Install-CI
 on: [push, pull_request, workflow_dispatch]
-defaults:
-  run:
-    shell: zsh {0}
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: zsh {0}
     steps:
       - uses: actions/checkout@v2
       - run: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
