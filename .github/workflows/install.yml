@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: sudo apt install zsh
-      - run: chsh -s $(which zsh)
+      - run: sudo chsh -s $(which zsh)
       - run: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
       - run: rm ~/.zshrc
       - run: source install.sh
