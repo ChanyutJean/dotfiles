@@ -13,8 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: sudo apt install zsh
-      - run: sudo chsh -s $(which zsh)
-      - run: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-      - run: rm ~/.zshrc
+      - name: setup
+        run: |
+          sudo apt install zsh
+          sudo chsh -s $(which zsh)
+          sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+          rm ~/.zshrc
+          reboot
       - run: source install.sh
