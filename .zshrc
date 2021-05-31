@@ -144,4 +144,4 @@ alias gstp='git stash pop'
 alias gstc='git stash clear'
 
 # Change directory to Desktop
-cd ~/Desktop
+cd Desktop
