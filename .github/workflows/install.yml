@@ -11,3 +11,4 @@ jobs:
       - run: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
       - run: rm ~/.zshrc
       - run: source install.sh
+        shell: zsh {0}
