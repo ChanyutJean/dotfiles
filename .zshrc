@@ -143,5 +143,10 @@ alias gstl='git stash list'
 alias gstp='git stash pop'
 alias gstc='git stash clear'
 
+alias d='cd Desktop'
+
+# Path environment variables
+export PATH=$PATH:/usr/local/go/bin
+
 # Change directory to Desktop
 cd /home/$(whoami)/Desktop
